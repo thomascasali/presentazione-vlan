@@ -557,6 +557,36 @@ function Slide3() {
           font-size: 0.85rem;
           color: var(--gray-600);
         }
+        @media (max-width: 900px) {
+          .access-switches {
+            flex-wrap: wrap;
+            gap: 1rem;
+          }
+          .notes-grid {
+            grid-template-columns: 1fr;
+          }
+          .endpoints {
+            flex-wrap: wrap;
+            gap: 1.5rem;
+          }
+        }
+        @media (max-width: 600px) {
+          .network-diagram {
+            padding: 1rem;
+          }
+          .device {
+            padding: 0.75rem;
+          }
+          .device-icon {
+            font-size: 1.5rem;
+          }
+          .device-name {
+            font-size: 0.8rem;
+          }
+          .device-detail {
+            font-size: 0.7rem;
+          }
+        }
       `}</style>
     </Slide>
   );

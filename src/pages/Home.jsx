@@ -118,6 +118,8 @@ export function Home() {
           min-height: 100vh;
           display: flex;
           flex-direction: column;
+          overflow-y: auto;
+          height: 100vh;
         }
 
         .hero {

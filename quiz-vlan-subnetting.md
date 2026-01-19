@@ -1,4 +1,4 @@
-# Quiz VLAN e Subnetting - 40 Domande a Risposta Multipla
+# Quiz VLAN e Subnetting - 50 Domande a Risposta Multipla
 
 ## Istruzioni
 Per ogni domanda, seleziona l'unica risposta corretta tra le quattro opzioni disponibili.
@@ -358,6 +358,90 @@ Quale elemento NON fa parte di una corretta documentazione di rete?
 
 ---
 
+## Sezione 9: Domande Avanzate (FLSM, VLSM, VLAN)
+
+### Domanda 41
+Data la rete 172.20.0.0/16, si devono creare subnet FLSM per ospitare esattamente 1000 host ciascuna. Quante subnet è possibile creare e quanti indirizzi vengono sprecati per ogni subnet?
+
+- A) 64 subnet, 22 indirizzi sprecati per subnet
+- B) 32 subnet, 46 indirizzi sprecati per subnet
+- C) 64 subnet, 1046 indirizzi sprecati per subnet (Corretta)
+- D) 128 subnet, 510 indirizzi sprecati per subnet
+
+### Domanda 42
+Un'azienda ha la rete 10.50.0.0/16 e deve implementare VLSM per i seguenti requisiti: Sede A (4000 host), Sede B (1000 host), Sede C (500 host), DMZ (50 host), 3 collegamenti WAN point-to-point. Qual è l'ordine corretto di allocazione delle subnet?
+
+- A) DMZ, WAN, Sede C, Sede B, Sede A
+- B) Sede A, Sede B, Sede C, DMZ, WAN (Corretta)
+- C) WAN, DMZ, Sede C, Sede B, Sede A
+- D) L'ordine non è rilevante in VLSM
+
+### Domanda 43
+In uno switch con 48 porte, le porte 1-12 sono in VLAN 10, le porte 13-24 in VLAN 20, le porte 25-36 in VLAN 30, e le porte 37-48 sono trunk verso altri switch. Quanti domini di broadcast separati esistono su questo singolo switch?
+
+- A) 1
+- B) 3 (Corretta)
+- C) 4
+- D) 48
+
+### Domanda 44
+Applicando VLSM alla rete 192.168.100.0/24, dopo aver allocato 192.168.100.0/26 (62 host) e 192.168.100.64/27 (30 host), qual è il prossimo indirizzo di rete disponibile per una subnet che necessita di 14 host?
+
+- A) 192.168.100.96/28 (Corretta)
+- B) 192.168.100.128/28
+- C) 192.168.100.92/28
+- D) 192.168.100.80/28
+
+### Domanda 45
+Nel tag 802.1Q, il campo PCP (Priority Code Point) a 3 bit permette di definire quanti livelli di priorità, e quale valore indica la priorità più alta per il traffico voce?
+
+- A) 8 livelli, valore 7
+- B) 8 livelli, valore 5 (Corretta)
+- C) 4 livelli, valore 3
+- D) 16 livelli, valore 15
+
+### Domanda 46
+Un amministratore deve calcolare quanti indirizzi IP vengono totalmente sprecati usando FLSM invece di VLSM per: Rete A (200 host), Rete B (50 host), Rete C (25 host), Rete D (10 host). Qual è la differenza di indirizzi sprecati tra i due approcci?
+
+- A) 428 indirizzi (Corretta)
+- B) 256 indirizzi
+- C) 512 indirizzi
+- D) 170 indirizzi
+
+### Domanda 47
+In una topologia con 3 switch interconnessi tramite trunk, ogni switch ha configurate le VLAN 10, 20, 30 e 40. Switch A ha 20 host in VLAN 10, Switch B ha 15 host in VLAN 10, Switch C ha 10 host in VLAN 10. Un frame broadcast generato da un host in VLAN 10 su Switch A raggiungerà:
+
+- A) Solo i 19 host rimanenti su Switch A
+- B) Tutti i 45 host in VLAN 10 sui tre switch (Corretta)
+- C) Tutti gli host su tutti e tre gli switch
+- D) Solo gli host su Switch A e B
+
+### Domanda 48
+Data la rete 10.0.0.0/8, un ISP deve allocare blocchi ai clienti usando VLSM. Il primo cliente riceve 10.0.0.0/12. Qual è l'indirizzo di rete del blocco successivo disponibile per un secondo cliente che necessita di un /14?
+
+- A) 10.16.0.0/14 (Corretta)
+- B) 10.32.0.0/14
+- C) 10.8.0.0/14
+- D) 10.12.0.0/14
+
+### Domanda 49
+Uno switch Layer 2 riceve un frame con tag 802.1Q sulla porta trunk. Il VID nel tag è 100, ma la VLAN 100 non è stata creata sullo switch. Qual è il comportamento corretto dello switch?
+
+- A) Inoltra il frame sulla Native VLAN
+- B) Crea automaticamente la VLAN 100
+- C) Scarta il frame (Corretta)
+- D) Rimuove il tag e inoltra come untagged
+
+### Domanda 50
+In un progetto VLSM per la rete 172.16.0.0/16, sono stati allocati i seguenti blocchi in sequenza: 172.16.0.0/18, 172.16.64.0/19, 172.16.96.0/20. Qual è il blocco più grande ancora allocabile in modo contiguo?
+
+- A) /19
+- B) /18
+- C) /17 (Corretta)
+- D) /20
+
+---
+
 ## Risposte Rapide
 
 | Domanda | Risposta |
@@ -402,3 +486,13 @@ Quale elemento NON fa parte di una corretta documentazione di rete?
 | 38 | B |
 | 39 | C |
 | 40 | C |
+| 41 | C |
+| 42 | B |
+| 43 | B |
+| 44 | A |
+| 45 | B |
+| 46 | A |
+| 47 | B |
+| 48 | A |
+| 49 | C |
+| 50 | C |
